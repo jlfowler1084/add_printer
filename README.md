@@ -1,2 +1,2 @@
-# add_printer.ps1
+# add_vbprinter.ps1
 Install a new printer
