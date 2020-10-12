@@ -19,11 +19,11 @@
 
 ----------------------------------------------
 
-1. Baltimore/Delaware/Annapolis 
-2. Washington D.C.
-3. Los Angeles/San Francisco
-4. Towson/Tysons
-5. New York
+1. Office1 
+2. Office2
+3. Office3
+4. Office4
+5. Office5
 
 Q. Quit
 
@@ -40,28 +40,28 @@ $r = Read-Host $OfficeMenu
 Switch ($r){
 
 "1"{
-    write-host "Setting Server to BA Print Server" -ForegroundColor Green
-    $Server = 'BAPrintServer'
+    write-host "Setting Server to Office 1 Print Server" -ForegroundColor Green
+    $Server = 'Office1PrintServer'
     }
 
 "2"{
-    write-host "Setting Server to DC Print Server" -ForegroundColor Green
-    $Server = 'DCPrintServer'
+    write-host "Setting Server to Office 2 Print Server" -ForegroundColor Green
+    $Server = 'Office2PrintServer'
     }
 
 "3"{
-    write-host "Setting Server to LA Print Server" -ForegroundColor Green
+    write-host "Setting Server to Office 3 Print Server" -ForegroundColor Green
     $Server = 'LAPrintServer'
     }
 
 "4"{
-    write-host "Setting Server to "Shared Print Server" -ForegroundColor Green
-    $Server = 'MiscPrintServer'
+    write-host "Setting Server to "Office 4 Print Server" -ForegroundColor Green
+    $Server = 'Office4PrintServer'
     }
 
 "5"{
-    write-host "Setting Server to NY Print Server" -ForegroundColor Green
-    $Server = 'NYPrintServer'
+    write-host "Setting Server to Office 5 Print Server" -ForegroundColor Green
+    $Server = 'Office5PrintServer'
     }
 
 "Q" {
