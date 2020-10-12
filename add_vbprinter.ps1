@@ -51,7 +51,7 @@ Switch ($r){
 
 "3"{
     write-host "Setting Server to Office 3 Print Server" -ForegroundColor Green
-    $Server = 'LAPrintServer'
+    $Server = 'Office3PrintServer'
     }
 
 "4"{
@@ -145,11 +145,11 @@ Switch ($r) {
  $Port = "$PrinterName.venable.com"
  
  switch($Server){
-    BAPrintServer {Add-DnsServerResourceRecord -ComputerName pbaad-sdc01 -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
-    DCPrintServer {Add-DnsServerResourceRecord -ComputerName pdcad-sdc01 -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
-    LAPrintServer {Add-DnsServerResourceRecord -ComputerName pwcad-sdc02 -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
-    NYPrintServer {Add-DnsServerResourceRecord -ComputerName pnyad-sdc01 -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
-    MiscPrintServer {Add-DnsServerResourceRecord -ComputerName pbaad-sdc01 -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
+    Office1PrintServer {Add-DnsServerResourceRecord -ComputerName office1_DC -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
+    Office2PrintServer {Add-DnsServerResourceRecord -ComputerName office2_DC -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
+    Office3PrintServer {Add-DnsServerResourceRecord -ComputerName office3_DC -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
+    Office4PrintServer {Add-DnsServerResourceRecord -ComputerName office4_DC -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
+    Office5PrintServer {Add-DnsServerResourceRecord -ComputerName office5_DC -A -Name $PrinterName -ZoneName "venable.com" -IPv4Address $IPAddress.ipaddressToString}
  }
 
 
